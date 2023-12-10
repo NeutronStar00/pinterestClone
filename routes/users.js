@@ -1,14 +1,17 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const plm = require("passport-local-mongoose");
 
-mongoose.connect("mongodb+srv://anshul1202singh:NyLBea2NZhDg3gKQ@cluster0.xvgt87m.mongodb.net/");
+dotenv.config();
+
+mongoose.connect(process.env.MONGODB_URI);
 
 const userSchema = mongoose.Schema({
   email:{type:String, require:true, unique:true},
   name:{type:String, require:true},
   username:{type:String, require:true, unique:true},
   profilepic:{type:String},
-  pssword:{type:String, require:true},
+  password:{type:String, require:true},
   posts: [{
     type: mongoose.Schema.Types.ObjectId,
     ref:"post"
