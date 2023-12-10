@@ -2,18 +2,16 @@
 
 This is a Pinterest Clone project created for educational purposes. It's a web application that allows users to share and discover creative ideas through image posts.
 
+[![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?logo=github)](https://github.com/NeutronStar00/pinterestClone)
+[![Deployment](https://img.shields.io/badge/Deployment-Visit%20the%20App-green?logo=heroku)](https://pinterestclone-production.up.railway.app/register)
+
+
 ## Table of Contents
 
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-
----
+  - [Technologies Used](#technologies-used)
 
 ## Features
 
