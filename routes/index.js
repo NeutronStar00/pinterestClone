@@ -33,6 +33,21 @@ router.get('/show/posts', isLoggedIn, async function(req, res, next) {
   res.render('show', {user, navbar:true});
 });
 
+router.get('/post/:postId', isLoggedIn, async function(req, res, next) {
+  try {
+    const postId = req.params.postId;
+    const post = await postModel.findById(postId).populate('user');
+
+    if (!post) {
+      return res.status(404).send('Post not found');
+    }
+
+    res.render('postDetails', { post, navbar: true });
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.get('/feed', isLoggedIn, async function(req, res, next) {
   const user = await userModel.findOne({username: req.session.passport.user});
   const posts = await postModel.find()
